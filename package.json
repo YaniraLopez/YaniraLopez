@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "testcafe chrome Tests/Frontend.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "testcafe": "^1.15.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
