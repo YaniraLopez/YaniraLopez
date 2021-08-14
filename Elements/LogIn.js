@@ -1,19 +1,16 @@
-import { t, Selector } from 'testcafe'
-​
+import { t, Selector } from 'testcafe';
 class LoginPage {
     constructor() {
-        this.EmailTbox = Selector('.input_email');
-        this.PasswordTbox = Selector('.form_field_control');
-        this.LoginBtn = Selector('.submit_btn');
-        this.errorMsg = Selector('p.error-message')
+        this.emailInput = Selector('.input_email');
+        this.passwordInput = Selector('.form_field_control');
+        this.loginBtn = Selector('.submit_btn');
+        this.errorMsg = Selector('.error_msg');
     }
-​
-    loginFlow = async (username, password) => {
+    loginFlow = async (useremail, password) => {
         await t
-            .typeText(this.userInput, username)
+            .typeText(this.emailInput, useremail)
             .typeText(this.passwordInput, password)
             .click(this.loginBtn)
     }
 }
-​
-export default new LoginPage()
+export default new LoginPage();
